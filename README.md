@@ -7,6 +7,16 @@ Implementing Adversarial attacks with various datasets and architectures
 
 The fast gradient sign method works by using the gradients of the neural network to create an adversarial example. For an input image, the method uses the gradients of the loss with respect to the input image to create a new image that maximises the loss. This new image is called the adversarial image. This can be summarised using the following expression:
 
+```adv_x=x+ϵ∗sign(∇xJ(θ,x,y))```
+
+where 
+* adv_x : Adversarial image.
+* x : Original input image.
+* y : Original input label.
+* ϵ  : Multiplier to ensure the perturbations are small.
+* θ  : Model parameters.
+* J  : Loss.
+
 2) **UAP** : Universal Adversarial Perturbation
 3) **DeepFool**
 
